@@ -1,0 +1,54 @@
+@border-color: 2px solid #ccc;
+@bground: #e0ffff;
+
+.screenSmall(@rules) {
+	@media all and (min-width: 465px) and (max-width: 600px) {
+		@rules();
+	}
+}
+
+.Card {
+	display: flex;
+	background: @bground;
+	margin: 10px;
+	padding: 10px;
+	&-imagecontainer {
+		margin: 10px 0;
+	}
+	&:first-child {
+		border-bottom: @border-color;
+	}
+	&-body {
+		padding: 10px;
+	}
+	&-text {
+		font-size: 14px;
+		color: #727272;
+	}
+	&-column {
+		display: flex;
+		flex-direction: column;
+		background: @bground;
+		margin: 20px;
+		padding: 10px;
+		border: @border-color;
+		& .Card-imagecontainer {
+			text-align: center;
+		}
+	}
+	.screenSmall ({
+		flex-direction: column;
+		&-imagecontainer {
+			text-align: center;
+		}
+		&--reverse {
+			flex-direction: column-reverse;
+		}
+		&-column {
+			flex-direction: row;
+		}
+		&-column--right {
+			flex-direction: row-reverse;
+		}
+	})
+}

@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.Card {
+  display: flex;
+  background: #e0ffff;
+  margin: 10px;
+  padding: 10px;
+}
+.Card-imagecontainer {
+  margin: 10px 0;
+}
+.Card:first-child {
+  border-bottom: 2px solid #ccc;
+}
+.Card-body {
+  padding: 10px;
+}
+.Card-text {
+  font-size: 14px;
+  color: #727272;
+}
+.Card-column {
+  display: flex;
+  flex-direction: column;
+  background: #e0ffff;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #ccc;
+}
+.Card-column .Card-imagecontainer {
+  text-align: center;
+}
+@media all and (min-width: 465px) and (max-width: 600px) {
+  .Card {
+    flex-direction: column;
+  }
+  .Card-imagecontainer {
+    text-align: center;
+  }
+  .Card--reverse {
+    flex-direction: column-reverse;
+  }
+  .Card-column {
+    flex-direction: row;
+  }
+  .Card-column--right {
+    flex-direction: row-reverse;
+  }
+}
+@media all and (min-width: 465px) and (max-width: 600px) {
+  .Card {
+    flex-direction: column;
+  }
+  .Card-imagecontainer {
+    text-align: center;
+  }
+  .Card--reverse {
+    flex-direction: column-reverse;
+  }
+  .Card-column {
+    flex-direction: row;
+  }
+  .Card-column--right {
+    flex-direction: row-reverse;
+  }
+}
+.header {
+  height: 50px;
+  background: #e0ffff;
+  margin-bottom: 10px;
+}
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.col-xs-1-5 {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+.Cardpic {
+  width: 100%;
+}
+@media all and (min-width: 465px) and (max-width: 600px) {
+  .Cardpic {
+    height: 150px;
+  }
+}
+@media all and (min-width: 465px) and (max-width: 600px) {
+  .Cardpic {
+    height: 150px;
+  }
+}
+.WrapperCard {
+  border: 2px solid #ccc;
+  margin: 10px;
+  position: relative;
+}
+.WrapperCard:hover .block {
+  display: block;
+  opacity: 0.8;
+}
+@media all and (min-width: 465px) and (max-width: 600px) {
+  .WrapperCard--small {
+    margin-bottom: -10px;
+  }
+}
+@media all and (min-width: 465px) and (max-width: 600px) {
+  .WrapperCard--small {
+    margin-bottom: -10px;
+  }
+}
+.block {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: #ccc;
+  display: none;
+}
